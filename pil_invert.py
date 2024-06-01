@@ -10,12 +10,12 @@ from pathlib import Path
 import json
 import base64
 
-UPLOADED_IMG_DIR = Path("uploaded")
-UPLOADED_IMG = "images-owls-png-hd-owl-free-download-png-png-image-485.png"
+INPUT_IMG = "/tmp/input.jpg"
+OUTPUT_IMG = "/tmp/output.jpg"
 
 
-img = Image.open(str(UPLOADED_IMG_DIR.joinpath(UPLOADED_IMG)))
-# img likely has an alpha channel if it's a png, so convert to RGB
+img = Image.open(INPUT_IMG)
+# img likely has an alpha channel if it's a png/jpg, so convert to RGB
 img_rgb = img.convert("RGB")
 inv = ImageOps.invert(img_rgb)
 inv.show()

@@ -63,9 +63,7 @@ image_width = char_width * width
 image_height = char_height * height
 print(f"output image dims: width={image_width}, height={image_height}")
 print(f"output image dims: width={char_width * width}, height={char_height * height}")
-shrunk_image_width = new_width * width
-shrunk_image_height = new_height * height
-print(f"shrunk output image dims: width={shrunk_image_width}, height={shrunk_image_height}")
+print(f"shrunk output image dims: width={new_width}, height={new_height}")
 
 # Create a new blank image with white background
 image = Image.new('RGB', (image_width, image_height), color='white')
